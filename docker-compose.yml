@@ -1,0 +1,10 @@
+version: '3'
+services:
+  python3:
+    # restart: always
+    build: . # buildされる時のpath
+    container_name: 'python3' # コンテナ名
+    working_dir: '/root/'
+    tty: true # 永続化
+    volumes:
+      - ./opt:/root
